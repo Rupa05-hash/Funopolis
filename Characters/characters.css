@@ -9,12 +9,48 @@ a{
     color: blue;
 }
 body {
-    background-image: linear-gradient(#e7a300, #f0c200, #f2db00, #fff060, #f9ffa1);
+    background-image: url("../background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: Comic Sans Ms;
+}
+
+.bio {
+    font-size: 20px;
+    text-align: justify;
 }
 
 .cite {
     color: gray
 }
+
+.explore {
+    text-align: center;
+    font-size: 50px;
+    color: white;
+    margin: auto;
+}
+.rainbowtext {
+    background-image: linear-gradient(red, orange, yellow, green, blue, indigo, violet);
+}
+
+.nav {
+    opacity: 0.5;
+  }
+  
+  .nav:hover {
+    opacity: 1.0;
+  }
+  
+  .navbtn {
+    background-image: linear-gradient(red, orange, yellow, green, blue, indigo, violet);
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    color: white;
+  }
+  
 
 *,
 *:before,
@@ -24,6 +60,7 @@ body {
 }
 header,
 nav,
+aside,
 article,
 footer,
 h1,
@@ -64,6 +101,18 @@ header {
   }
   main,
   section,
+  aside + article {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 8.3333%;
+        -ms-flex: 1 8.3333%;
+            flex: 1 8.3333%;
+    min-width: 8.3333%;
+  }
+  aside {
+    -webkit-flex-basis: 20%;
+        -ms-flex-preferred-size: 20%;
+            flex-basis: 20%;
+  }
     footer {
     -webkit-align-self: flex-end;
         -ms-flex-item-align: end;
